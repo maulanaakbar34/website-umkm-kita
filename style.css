@@ -1,0 +1,49 @@
+:root {
+    --primary: #27ae60;
+    --dark: #2c3e50;
+    --light: #f4f7f6;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
+/* Navigation */
+nav {
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { text-decoration: none; color: var(--dark); font-weight: 600; }
+nav ul li a:hover { color: var(--primary); }
+
+/* Common Layout */
+section { padding: 60px 10%; }
+.container { max-width: 1200px; margin: auto; }
+h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; }
+.btn { background: var(--primary); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; border: none; cursor: pointer; }
+
+/* Grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+/* Footer */
+footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    nav { flex-direction: column; }
+    nav ul { margin-top: 15px; }
+    nav ul li { margin: 0 10px; }
+}
